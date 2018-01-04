@@ -31,6 +31,7 @@ public:
 		float Health = 100;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Base Character")
 		bool isDead = false;
+	UFUNCTION(BlueprintCallable,Category="Base Character")
 	virtual void OnCalculateDead();
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
 		virtual void CalculateHealth(float delta);

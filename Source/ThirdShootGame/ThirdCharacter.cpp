@@ -22,6 +22,7 @@ void AThirdCharacter::BeginPlay()
 void AThirdCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	OnCalculateDead();
 
 }
 
@@ -35,7 +36,7 @@ void AThirdCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 //Implement CalculateHealth
 void AThirdCharacter::CalculateHealth(float Delta)
 {
-	Health += Delta;
+	Health -= Delta;
 	OnCalculateDead();
 }
 //Implement CalculateDead
